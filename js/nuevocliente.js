@@ -7,7 +7,10 @@ import {
   formularioElement
 } from './selectores.js';
 
-import { validarCliente } from './funciones.js';
+import {
+  validarCliente,
+  mostrarAlerta
+} from './funciones.js';
 
 const init = (event) => {
   event.preventDefault();
@@ -22,11 +25,11 @@ const init = (event) => {
   const esValido = validarCliente(datosCliente);
 
   if (!esValido) {
-    console.log('Cliente inválido');
+    mostrarAlerta(formularioElement, 'Todos los campos son obligatorios', false);
     return;
   }
 
-  console.log('Cliente válido');
+  // mostrarAlerta(formularioElement, 'Cliente agregado correctamente');
 };
 
 // Carga los eventos
