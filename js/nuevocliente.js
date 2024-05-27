@@ -18,6 +18,15 @@ const init = (event) => {
     telefono: telefonoInputElement.value.trim(),
     empresa: empresaInputElement.value.trim()
   };
+
+  const esValido = validarCliente(datosCliente);
+
+  if (!esValido) {
+    console.log('Cliente inválido');
+    return;
+  }
+
+  console.log('Cliente válido');
 };
 
 // Carga los eventos
