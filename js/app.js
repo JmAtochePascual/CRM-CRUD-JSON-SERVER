@@ -1,5 +1,5 @@
 import { listadoClientes } from './selectores.js';
-import { obtenerClientes } from './API.js';
+import { obtenerClientes, eliminarCliente } from './API.js';
 
 const mostrarClientes = async () => {
   const clientes = await obtenerClientes();
@@ -29,7 +29,19 @@ const mostrarClientes = async () => {
 };
 
 
+// Elimina un cliente
+const eliminar = (event) => {
+  if (event.target.classList.contains('eliminar')) {
+
+    const clienteId = event.target.dataset.cliente;
+    eliminarCliente(clienteId);
+  }
+};
+
+
 // Carga los eventos
 document.addEventListener('DOMContentLoaded', () => {
   mostrarClientes();
+
+  listadoClientes.addEventListener('click', eliminar);
 });

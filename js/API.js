@@ -23,6 +23,7 @@ export const agregarCliente = async (cliente) => {
   }
 };
 
+
 // Obtiene los clientes de la API
 export const obtenerClientes = async () => {
   const URL = 'http://localhost:4000/clientes';
@@ -34,5 +35,20 @@ export const obtenerClientes = async () => {
     return clientes;
   } catch (error) {
     console.log(error, 'Error al obtener clientes de la API');
+  }
+};
+
+
+// Elimina un cliente de la API
+export const eliminarCliente = async (id) => {
+  const URL = `http://localhost:4000/clientes/${id}`;
+
+  try {
+    await fetch(URL, {
+      method: 'DELETE'
+    });
+
+  } catch (error) {
+    console.log(error, 'Error al eliminar cliente de la API');
   }
 };

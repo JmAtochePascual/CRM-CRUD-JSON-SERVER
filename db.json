@@ -5,21 +5,7 @@
       "email": "correo2@correo.com",
       "telefono": "965230245",
       "empresa": "Multi Servicios",
-      "id": 1
-    },
-    {
-      "id": "e27f",
-      "nombre": "jean",
-      "email": "spayck@gmail.com",
-      "telefono": "123",
-      "empresa": "xd"
-    },
-    {
-      "id": "4db4",
-      "nombre": "Pedro",
-      "email": "spayck@gmail.com",
-      "telefono": "1234567891011",
-      "empresa": "MasterSAC"
+      "id": "1"
     }
   ]
 }
