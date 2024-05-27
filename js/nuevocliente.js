@@ -14,6 +14,7 @@ import {
 
 import { agregarCliente } from './API.js';
 
+// Inicializa la aplicación
 const init = (event) => {
   event.preventDefault();
 
@@ -33,6 +34,7 @@ const init = (event) => {
 
   agregarCliente(datosCliente);
 };
+
 
 // Carga los eventos
 document.addEventListener('DOMContentLoaded', () => {
