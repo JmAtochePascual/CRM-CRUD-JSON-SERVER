@@ -12,6 +12,8 @@ import {
   mostrarAlerta
 } from './funciones.js';
 
+import { agregarCliente } from './API.js';
+
 const init = (event) => {
   event.preventDefault();
 
@@ -29,7 +31,7 @@ const init = (event) => {
     return;
   }
 
-  // mostrarAlerta(formularioElement, 'Cliente agregado correctamente');
+  agregarCliente(datosCliente);
 };
 
 // Carga los eventos
