@@ -1,3 +1,10 @@
+import {
+  nombreInputElement,
+  emailInputElement,
+  telefonoInputElement,
+  empresaInputElement,
+} from './selectores.js';
+
 // Vadlidar si los campos del formulario son diferentes de vacío
 export const validarCliente = (datosCliente) => Object.values(datosCliente).every(dato => dato !== '');
 
@@ -26,4 +33,17 @@ export const mostrarAlerta = (contenedor, mensaje, tipo = true) => {
   setTimeout(() => {
     alerta.remove();
   }, 3000);
+};
+
+
+// Crear objeto Cliente
+export const crearCliente = () => {
+  const cliente = {
+    nombre: nombreInputElement.value.trim(),
+    email: emailInputElement.value.trim(),
+    telefono: telefonoInputElement.value.trim(),
+    empresa: empresaInputElement.value.trim()
+  };
+
+  return cliente;
 };

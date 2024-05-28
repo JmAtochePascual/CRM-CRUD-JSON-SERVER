@@ -8,6 +8,7 @@ import {
 } from './selectores.js';
 
 import {
+  crearCliente,
   validarCliente,
   mostrarAlerta
 } from './funciones.js';
@@ -18,21 +19,16 @@ import { agregarCliente } from './API.js';
 const init = (event) => {
   event.preventDefault();
 
-  const datosCliente = {
-    nombre: nombreInputElement.value.trim(),
-    email: emailInputElement.value.trim(),
-    telefono: telefonoInputElement.value.trim(),
-    empresa: empresaInputElement.value.trim()
-  };
+  const cliente = crearCliente();
 
-  const esValido = validarCliente(datosCliente);
+  const esValido = validarCliente(cliente);
 
   if (!esValido) {
     mostrarAlerta(formularioElement, 'Todos los campos son obligatorios', false);
     return;
   }
 
-  agregarCliente(datosCliente);
+  agregarCliente(cliente);
 };
 
 
