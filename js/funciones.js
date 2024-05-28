@@ -6,7 +6,7 @@ import {
 } from './selectores.js';
 
 // Vadlidar si los campos del formulario son diferentes de vacío
-export const validarCliente = (datosCliente) => Object.values(datosCliente).every(dato => dato !== '');
+export const validarCliente = (cliente) => Object.values(cliente).every(dato => dato !== '');
 
 
 // Muestra un mensaje de alerta
@@ -46,4 +46,15 @@ export const crearCliente = () => {
   };
 
   return cliente;
+};
+
+
+// Llena los campos del formulario con los datos del cliente
+export const llenarInputsFormulario = (cliente) => {
+  const { nombre, email, telefono, empresa } = cliente;
+
+  nombreInputElement.value = nombre;
+  emailInputElement.value = email;
+  telefonoInputElement.value = telefono;
+  empresaInputElement.value = empresa;
 };

@@ -1,7 +1,7 @@
 import { listadoClientes } from './selectores.js';
 import { obtenerClientes, eliminarCliente } from './API.js';
 
-const mostrarClientes = async () => {
+const listarClientes = async () => {
   const clientes = await obtenerClientes();
 
   clientes.forEach(cliente => {
@@ -41,7 +41,7 @@ const eliminar = (event) => {
 
 // Carga los eventos
 document.addEventListener('DOMContentLoaded', () => {
-  mostrarClientes();
+  listarClientes();
 
   listadoClientes.addEventListener('click', eliminar);
 });

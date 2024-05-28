@@ -27,20 +27,6 @@
       "telefono": "123456",
       "empresa": "Cartosac Empresa",
       "id": "1042"
-    },
-    {
-      "nombre": "Pedro",
-      "email": "spayck@gmail.com",
-      "telefono": "1234567891011",
-      "empresa": "codigo con jean",
-      "id": "aaf0"
-    },
-    {
-      "id": "8cad",
-      "nombre": "jean",
-      "email": "spayck@gmail.com",
-      "telefono": "123",
-      "empresa": "codigo con jean"
     }
   ]
 }

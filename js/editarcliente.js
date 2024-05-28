@@ -11,6 +11,8 @@ import {
   formularioElement
 } from './selectores.js';
 
+import { llenarInputsFormulario } from './funciones.js';
+
 let clienteActualizado = {
   nombre: '',
   email: '',
@@ -21,20 +23,15 @@ let clienteActualizado = {
 
 
 // Llena los datos del cliente en el formulario
-const llenarDatosCliente = async () => {
+const llenarFormulario = async () => {
   const parametrosURL = new URLSearchParams(window.location.search);
-
   const idCliente = parametrosURL.get('id');
 
   const cliente = await obtenerCliente(idCliente)
-  const { nombre, email, telefono, empresa } = cliente;
 
-  nombreInputElement.value = nombre;
-  emailInputElement.value = email;
-  telefonoInputElement.value = telefono;
-  empresaInputElement.value = empresa;
+  llenarInputsFormulario(cliente);
 
-  clienteActualizado.id = idCliente;
+  clienteActualizado.id = cliente.id;
 };
 
 
@@ -52,6 +49,7 @@ const actualizar = async (event) => {
 
 // Carga los eventos
 document.addEventListener('DOMContentLoaded', () => {
-  llenarDatosCliente();
+  llenarFormulario();
+
   formularioElement.addEventListener('submit', actualizar);
 });

@@ -1,9 +1,12 @@
 import { mostrarAlerta } from './funciones.js';
 import { formularioElement } from './selectores.js';
 
+const API = 'http://localhost:4000/clientes';
+
+
 // Agregar cliente a la API
 export const agregarCliente = async (cliente) => {
-  const URL = 'http://localhost:4000/clientes';
+  const URL = `${API}`;
 
   try {
     await fetch(URL, {
@@ -26,7 +29,7 @@ export const agregarCliente = async (cliente) => {
 
 // Obtiene los clientes de la API
 export const obtenerClientes = async () => {
-  const URL = 'http://localhost:4000/clientes';
+  const URL = `${API}`;
 
   try {
     const respuesta = await fetch(URL);
@@ -38,9 +41,10 @@ export const obtenerClientes = async () => {
   }
 };
 
+
 // Obtiene un cliente por su ID
 export const obtenerCliente = async (id) => {
-  const URL = `http://localhost:4000/clientes/${id}`;
+  const URL = `${API}/${id}`;
 
   try {
     const respuesta = await fetch(URL);
@@ -55,7 +59,7 @@ export const obtenerCliente = async (id) => {
 
 // Elimina un cliente de la API
 export const eliminarCliente = async (id) => {
-  const URL = `http://localhost:4000/clientes/${id}`;
+  const URL = `${API}/${id}`;
 
   try {
     await fetch(URL, {
@@ -69,8 +73,8 @@ export const eliminarCliente = async (id) => {
 
 
 // Actualiza un cliente en la API
-export const actualizarCliente = async (cliente) => {
-  const URL = `http://localhost:4000/clientes/${cliente.id}`;
+export const actualizarCliente = async (id) => {
+  const URL = `${API}/${id}`;
 
   try {
     await fetch(URL, {
