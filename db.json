@@ -6,6 +6,34 @@
       "telefono": "965230245",
       "empresa": "Multi Servicios",
       "id": "1"
+    },
+    {
+      "nombre": "Juan NUEVO!",
+      "email": "correo2@correo.com",
+      "telefono": "965230245",
+      "empresa": "Multi Servicios",
+      "id": "2"
+    },
+    {
+      "nombre": "Juan NUEVO!",
+      "email": "correo2@correo.com",
+      "telefono": "965230245",
+      "empresa": "Multi Servicios",
+      "id": "3"
+    },
+    {
+      "nombre": "spayk2",
+      "email": "spayck@gmail.com",
+      "telefono": "123456",
+      "empresa": "Cartosac Empresa",
+      "id": "1042"
+    },
+    {
+      "nombre": "Pedro",
+      "email": "spayck@gmail.com",
+      "telefono": "1234567891011",
+      "empresa": "codigo con jean",
+      "id": "aaf0"
     }
   ]
 }
