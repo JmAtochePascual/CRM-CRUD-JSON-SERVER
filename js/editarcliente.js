@@ -4,22 +4,16 @@ import {
 } from './API.js';
 
 import {
-  nombreInputElement,
-  emailInputElement,
-  telefonoInputElement,
-  empresaInputElement,
   formularioElement
 } from './selectores.js';
 
-import { llenarInputsFormulario, obtenerIdClienteDesdeURL } from './funciones.js';
-
-let clienteActualizado = {
-  nombre: '',
-  email: '',
-  telefono: '',
-  empresa: '',
-  id: ''
-};
+import {
+  llenarInputsFormulario,
+  obtenerIdClienteDesdeURL,
+  crearCliente,
+  validarCliente,
+  mostrarAlerta
+} from './funciones.js';
 
 
 // Llena los datos del cliente en el formulario
@@ -29,8 +23,6 @@ const llenarFormulario = async () => {
   const cliente = await obtenerCliente(id)
 
   llenarInputsFormulario(cliente);
-
-  clienteActualizado.id = id;
 };
 
 
@@ -38,10 +30,15 @@ const llenarFormulario = async () => {
 const actualizar = async (event) => {
   event.preventDefault();
 
-  clienteActualizado.nombre = nombreInputElement.value;
-  clienteActualizado.email = emailInputElement.value;
-  clienteActualizado.telefono = telefonoInputElement.value;
-  clienteActualizado.empresa = empresaInputElement.value;
+  const clienteActualizado = crearCliente();
+  clienteActualizado.id = obtenerIdClienteDesdeURL();
+
+  const esValido = validarCliente(clienteActualizado);
+
+  if (!esValido) {
+    mostrarAlerta(formularioElement, 'Todos los campos son obligatorios', false);
+    return;
+  };
 
   actualizarCliente(clienteActualizado);
 };

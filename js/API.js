@@ -73,8 +73,8 @@ export const eliminarCliente = async (id) => {
 
 
 // Actualiza un cliente en la API
-export const actualizarCliente = async (id) => {
-  const URL = `${API}/${id}`;
+export const actualizarCliente = async (cliente) => {
+  const URL = `${API}/${cliente.id}`;
 
   try {
     await fetch(URL, {
@@ -84,6 +84,8 @@ export const actualizarCliente = async (id) => {
         'Content-Type': 'application/json'
       }
     });
+
+    mostrarAlerta(formularioElement, 'Cliente actualizado correctamente');
 
     window.location.href = 'index.html';
   } catch (error) {
