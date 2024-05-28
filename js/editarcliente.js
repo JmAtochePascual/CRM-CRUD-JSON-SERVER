@@ -11,7 +11,7 @@ import {
   formularioElement
 } from './selectores.js';
 
-import { llenarInputsFormulario } from './funciones.js';
+import { llenarInputsFormulario, obtenerIdClienteDesdeURL } from './funciones.js';
 
 let clienteActualizado = {
   nombre: '',
@@ -24,14 +24,13 @@ let clienteActualizado = {
 
 // Llena los datos del cliente en el formulario
 const llenarFormulario = async () => {
-  const parametrosURL = new URLSearchParams(window.location.search);
-  const idCliente = parametrosURL.get('id');
+  const id = obtenerIdClienteDesdeURL();
 
-  const cliente = await obtenerCliente(idCliente)
+  const cliente = await obtenerCliente(id)
 
   llenarInputsFormulario(cliente);
 
-  clienteActualizado.id = cliente.id;
+  clienteActualizado.id = id;
 };
 
 

@@ -58,3 +58,10 @@ export const llenarInputsFormulario = (cliente) => {
   telefonoInputElement.value = telefono;
   empresaInputElement.value = empresa;
 };
+
+
+// Obtiene el ID de la URL
+export const obtenerIdClienteDesdeURL = () => {
+  const parametrosURL = new URLSearchParams(window.location.search);
+  return parametrosURL.get('id');
+};
