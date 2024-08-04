@@ -6,16 +6,21 @@ Esta aplicación web permite gestionar información de clientes utilizando una A
 
 ## 🎯 Contenido
 
-1. [📝 Características](#📝-características)
-2. [🛠️ Tecnologías y Herramientas](#🛠️-tecnologías-y-herramientas)
-3. [🚀 Estructura del Proyecto](#🚀-estructura-del-proyecto)
-4. [🧑‍💻 Uso](#🧑‍💻-uso)
-5. [🏗️ Contribución](#🏗️-contribución)
-6. [✨ Licencia](#✨-licencia)
-7. [🙈 Imagen de Referencia](#🙈-imagen-de-referencia)
-8. [🌐 Ver Proyecto en la WEB](#🌐-ver-proyecto-en-la-web)
+1. 📝[Descripción](#descripción)
+2. 🛠️[Tecnologías y Herramientas](#tecnologías-y-herramientas)
+3. 🚀[Estructura del Proyecto](#estructura-del-proyecto)
+4. 🧑‍💻[Uso](#uso)
+5. 📌[Instalación](#instalación)
+6. 🏗️[Contribución](#contribución)
+7. ✨[Licencia](#licencia)
+8. 🙈[Imagen de Referencia](#imagen-de-rereferencia)
+9. 🌐[Ver Proyecto en la WEB](#ver-proyecto-en-la-web)
 
-## 📝 Características
+## Descripción
+
+Esta aplicación web permite gestionar información de clientes utilizando una API simulada con json-server. Puedes agregar, editar, eliminar y listar clientes en una interfaz sencilla y eficiente..
+
+## Características
 
 - **Agregar Cliente:** Permite agregar un nuevo cliente a la base de datos mediante un formulario.
 - **Editar Cliente:** Llena los campos del formulario con los datos de un cliente para su edición.
@@ -24,7 +29,7 @@ Esta aplicación web permite gestionar información de clientes utilizando una A
 - **Validación de Campos:** Verifica que todos los campos del formulario estén completos antes de enviar.
 - **Alertas Personalizadas:** Muestra alertas para informar sobre acciones como agregar, editar o eliminar clientes.
 
-## 🛠️ Tecnologías y Herramientas
+## Tecnologías y Herramientas
 
 - **HTML:** Estructura de la página.
 - **CSS:** Estilos de la página.
@@ -32,7 +37,7 @@ Esta aplicación web permite gestionar información de clientes utilizando una A
 - **Tailwind CSS:** Framework CSS para estilos y componentes.
 - **json-server:** Servidor para simular una API REST.
 
-## 🚀 Estructura del Proyecto
+## Estructura del Proyecto
 
 - **css/**: Carpeta con los estilos.
 - **js/**: Carpeta con la lógica del proyecto.
@@ -43,27 +48,19 @@ Esta aplicación web permite gestionar información de clientes utilizando una A
 - **db.json**: Archivo de datos para json-server.
 - **index.html**: Página principal.
 
-## 🧑‍💻 Uso
+## Uso
 
-### Requisitos
+1. Clona el repositorio: git clone [URL del repositorio]
+2. Navega a la carpeta del proyecto: cd [nombre del proyecto]
+3. Abre el archivo index.html en un navegador de tu elección.
+
+## Instalación
 
 Para poder usar este proyecto es necesario instalar json-server. Puedes instalarlo globalmente usando npm:
 
 ```
-npm install -g json-server
-```
-
-### Instrucciones
-
-1. Clona el repositorio: git clone [URL del repositorio]
-2. Navega a la carpeta del proyecto: cd [nombre del proyecto]
-3. Inicia json-server para simular la API REST:
-
-```
 json-server --watch db.json --port 4000
 ```
-
-4. Abre el archivo index.html en un navegador de tu elección.
 
 ## Solicitudes de API REST
 
@@ -74,7 +71,7 @@ El proyecto hace uso de las distintas solicitudes de API REST:
 - PUT: Actualizar un cliente existente.
 - DELETE: Eliminar un cliente de la lista.
 
-## 🏗️ Contribución
+## Contribución
 
 Si estás interesado en contribuir al proyecto, por favor sigue estos pasos:
 
@@ -84,15 +81,15 @@ Si estás interesado en contribuir al proyecto, por favor sigue estos pasos:
 4. Empuja la rama (`git push origin mi-nueva-característica`).
 5. Abre un pull request.
 
-## ✨ Licencia
+## Licencia
 
 Este proyecto está bajo la licencia [MIT](https://opensource.org/licenses/MIT).
 
-## 🙈 Imagen de Referencia
+## Imagen de Referencia
 
 ![Imagen de Referencia](https://i.postimg.cc/wBWmdkBP/CRM-JSON-SERVER.png)
 
-## 🌐 Ver Proyecto en la WEB
+## Ver Proyecto en la WEB
 
 Puedes ver el proyecto en funcionamiento [aquí](https://jmatochepascual.github.io/CRM-CRUD-JSON-SERVER/).
 
