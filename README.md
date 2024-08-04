@@ -13,7 +13,7 @@ Esta aplicación web permite gestionar información de clientes utilizando una A
 5. 📌[Instalación](#instalación)
 6. 🏗️[Contribución](#contribución)
 7. ✨[Licencia](#licencia)
-8. 🙈[Imagen de Referencia](#imagen-de-rereferencia)
+8. 🙈[Imagen de Referencia](#imagen-de-referencia)
 9. 🌐[Ver Proyecto en la WEB](#ver-proyecto-en-la-web)
 
 ## Descripción
